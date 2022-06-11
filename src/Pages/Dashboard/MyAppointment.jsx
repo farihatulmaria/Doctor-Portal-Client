@@ -10,7 +10,7 @@ const MyAppointment = () => {
     const  navigate = useNavigate();
     useEffect(() => {
       if(user){
-        axios.get(`http://localhost:5000/booking?patientEmail=${user.email}`,{
+        axios.get(`https://doctor-portal-app.herokuapp.com/booking?patientEmail=${user.email}`,{
               headers:{
                   'authorization':`user ${localStorage.getItem('accessToken')}`
               },

@@ -8,7 +8,7 @@ const AddDoctor = () => {
     const imageStorage_KEY = '819f223923061b4eb407559d94688bce';
 
     const { isLoading, error, data:services } = useQuery('services', () =>
-    fetch(`http://localhost:5000/services`,{
+    fetch(`https://doctor-portal-app.herokuapp.com/services`,{
         method:'GET',
         headers:{
             'authorization': `user ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const AddDoctor = () => {
                     specialty: data.specialty,
                     img,
                 }
-                const url = 'http://localhost:5000/doctors';
+                const url = 'https://doctor-portal-app.herokuapp.com/doctors';
                  fetch(url, {
                     method: 'POST',
                     headers: {

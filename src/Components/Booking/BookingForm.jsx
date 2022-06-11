@@ -26,7 +26,7 @@ const BookingForm = ({refetch,treatment,Date,setTreatment}) => {
             price,
             treatmentId:_id,
         }
-        const url = 'http://localhost:5000/booking';
+        const url = 'https://doctor-portal-app.herokuapp.com/booking';
         axios.post(url,{ 
             headers:{
                 'authorization':`user ${localStorage.getItem('accessToken')}`

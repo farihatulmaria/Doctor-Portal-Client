@@ -8,7 +8,7 @@ const Booking = ({date}) => {
     const [treatment, setTreatment] = useState(null);
     const formattedDate = format(date, 'PP');
     const { isLoading, error,refetch, data:appointments } = useQuery(['available',formattedDate], () =>
-    fetch(`http://localhost:5000/available?date=${formattedDate}`).then(res =>
+    fetch(`https://doctor-portal-app.herokuapp.com/available?date=${formattedDate}`).then(res =>
       res.json())
     )
     if (isLoading){

@@ -8,7 +8,7 @@ const useOnSubmit = (user) => {
         const tokenUser = {name:name,email:email};
         
         if(email){
-            axios.put(`http://localhost:5000/users/${email}`,{
+            axios.put(`https://doctor-portal-app.herokuapp.com/users/${email}`,{
                 user: tokenUser,
             })
             .then(res=>{

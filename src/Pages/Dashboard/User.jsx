@@ -4,7 +4,7 @@ import Loading from '../../Components/Loading/Loading';
 import UserRow from './UserRow';
 const User = ({date}) => {
     const { isLoading, error,refetch, data:users } = useQuery('users', () =>
-    fetch(`http://localhost:5000/users`,{
+    fetch(`https://doctor-portal-app.herokuapp.com/users`,{
         method:'GET',
         headers:{
             'authorization': `user ${localStorage.getItem('accessToken')}`
