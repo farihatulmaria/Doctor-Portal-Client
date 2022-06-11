@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button,
+button[type="submit"],
+.modal-button {
+  @apply bg-gradient-to-r border-0 from-secondary to-primary btn text-white;
+}
+button {
+  color: white !important;
+}
+.btn-outlined {
+  @apply border bg-none btn-outline !text-black hover:bg-accent hover:!text-white;
+}
+.title {
+  @apply text-secondary uppercase font-bold my-1 text-center;
+}
+.menu a {
+  @apply focus:!bg-accent focus:!text-white active:!bg-accent active:!text-white;
+}
+
+.info-bg {
+  @apply bg-gradient-to-r from-secondary to-primary;
+}
+
+input {
+  display: block;
+}
+
+.rdp-button svg {
+  @apply text-black;
+}
+.rdp-day,
+.rdp-button {
+  @apply !text-black rounded-none hover:!border-0 focus:!border-0;
+}
+.rdp-day_selected {
+  @apply !bg-primary !text-white;
+}
+input {
+  @apply input input-bordered input-primary w-full max-w-lg;
+}
+
+.flexible {
+  @apply flex justify-center items-center;
+}
+.progress:indeterminate::after {
+  @apply bg-primary;
+}
