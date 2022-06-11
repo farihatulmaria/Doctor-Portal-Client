@@ -16,7 +16,7 @@ const Booking = ({date}) => {
     }
  
     if (error){ 
-        return <h3 className='text-red-700 font-bold'>An error has occurred: {error.message}</h3>
+        return <h3 className='text-red-700 font-bold'>An error has occurred: {error?.message}</h3>
     }
   
     return (
